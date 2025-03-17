@@ -86,7 +86,7 @@ class LLMService:
 
                 if chunk:
                     full_response += chunk
-                    yield chunk  + "(@&##)" 
+                    yield chunk 
 
             self.memory_service.add_message("assistant", full_response)
         except Exception as e:
